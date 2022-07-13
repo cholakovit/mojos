@@ -14,7 +14,6 @@ export const mojoTheme = (mode) => {
                                 margin: 0,
                                 mode,
                                 ...(mode === 'light' ? { 
-                                    //backgroundColor: "#1f1530",
                                     backgroundColor: "#9e82e9",
                                     backgroundImage:'url(./src/img/background.svg)',
                                 } : { 
@@ -38,6 +37,15 @@ export const mojoTheme = (mode) => {
                         },
                           secondary: grey[800],
                         },
+                        primary: {
+                            orangeBorder: '1px solid #110e0c',
+                            main: '#fff',
+                            orangeBorderShadow: '0px 0px 2px #f8f9fa',
+                            tabBoxShadow: 'inset -6px 0px 6px -6px #f8f9fa, inset 0px 6px 6px -6px #f8f9fa, inset 6px 0px 6px -6px #f8f9fa',
+                            orangeGradient: '-webkit-linear-gradient(270deg, #fbcf3d 60%, #ea8417 10%)',
+                            mojoDividerBorder: '5px solid #6c3fba',
+                            imgBoxBorder: 'linear-gradient(360deg, #620334, #a89500) 1'
+                        },
                         secondary: {
                             light: '#785fbc',
                             tab: '#9e82e9',
@@ -52,7 +60,13 @@ export const mojoTheme = (mode) => {
                             main: '#e2e2e2',
                             dark: '#1f1530',
                             pinkButton: '#ff2b9f',
-                            pinkButtonHover: '#e01484'
+                            pinkButtonHover: '#e01484',
+                            orangeBorder: '1px solid #e56d1d',
+                            orangeBorderShadow: '0px 0px 2px #f8f9fa',
+                            tabBoxShadow: 'inset -6px 0px 4px -6px #f8f9fa, inset 0px 6px 4px -6px #f8f9fa, inset 6px 0px 4px -6px #f8f9fa',
+                            orangeGradient: '-webkit-linear-gradient(270deg, #ea8417 10%, #fbcf3d 60%)',
+                            mojoDividerBorder: '5px solid #291E3C',
+                            imgBoxBorder: 'linear-gradient(360deg, #c30d6b, #efd614) 1'
                         },
                         secondary: {
                             light: '#59468f',

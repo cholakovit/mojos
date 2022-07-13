@@ -6,9 +6,12 @@ const initialState = {
     slotGames: [],
     lineFilterParam: null,
     filtered: [],
+    filteredMsg: null,
     gameFeature: [],
-    status: 'idle', //'idle' | 'loading' | 'succeeded' | 'failed'
-    allGamesStatus: 'idle', //'idle' | 'loading' | 'succeeded' | 'failed'
+    status: import.meta.env.VITE_IDLE, //'idle' | 'loading' | 'succeeded' | 'failed'
+    allGamesStatus: import.meta.env.VITE_IDLE, //'idle' | 'loading' | 'succeeded' | 'failed'
+    allGamesError: null,
+    slotGamesError: null
 }
 
 export const selectGames = createAsyncThunk('games/games', async () => {
@@ -16,23 +19,18 @@ export const selectGames = createAsyncThunk('games/games', async () => {
     return games.data
 })
 
-export const selectSlotGames = createAsyncThunk('games/slotGames', async () => {
-    const slotGames = await axios.get(import.meta.env.VITE_MOJO_SLOT_GAMES)
-    return slotGames.data
-})
-
 const filter = (state) => {
 
     state.filtered.length = 0
+    state.filteredMsg = null
 
     switch(state.lineFilterParam) {
         case null:
-            console.log('case line null', state.lineFilterParam)
-            state.slotGames.filter(slotGame => {
+            state.games.filter(game => {
                 state.gameFeature.map(gameFeature => {
-                    const isTrue = slotGame.slotData.tags.some(tag => tag == gameFeature)
+                    const isTrue = game.slotData.tags.some(tag => tag == gameFeature)
                     if(isTrue == true) {
-                        state.filtered.push(slotGame)
+                        state.filtered.push(game)
                     }
                 })
             })
@@ -40,22 +38,22 @@ const filter = (state) => {
         break;
         case '1':
             state.filtered.length = 0 // array empty
-
-            state.slotGames.filter(slotGame => { // cycle through slot games
-
-                if(slotGame.slotData.linesCount > 4 && slotGame.slotData.linesCount < 10) { // check linesCount > 4 && < 10
+            state.games.filter(game => { // cycle through slot games
+//console.log('game.slotData.linesCount', current(game?.slotData)); 
+                if(game?.slotData?.linesCount > 4 && game?.slotData?.linesCount < 10) { // check linesCount > 4 && < 10
                     if(state.gameFeature.length > 0) { // if clicked any game feature
                         state.gameFeature.map(gameFeature => { // cycle through the picked game features
 
                             //find the picked game feature in the game features array
-                            const isTrue = slotGame.slotData.tags.some(tag => tag == gameFeature) 
+                            const isTrue = game.slotData.tags.some(tag => tag == gameFeature) 
+                            //const isTrue2 = state.filtered.some(filteredGame => filteredGame.name == game.name)
 
                             if(isTrue == true) { // if you find the picked game feature in the game array of featuress, PUSH
-                                state.filtered.push(slotGame)
+                                state.filtered.push(game)
                             }
                         })
                     } else if(state.gameFeature.length == 0) {
-                        state.filtered.push(slotGame)
+                        state.filtered.push(game)
                     }
                 }
             })
@@ -65,65 +63,76 @@ const filter = (state) => {
 
         case '2':
             state.filtered.length = 0 // array empty
-            state.slotGames.filter(slotGame => { // cycle through slot games
-                if(slotGame.slotData.linesCount > 9 && slotGame.slotData.linesCount < 30) { // check linesCount > 4 && < 10
+            state.games.filter(game => { // cycle through slot games
+
+                if(game?.slotData?.linesCount > 9 && game?.slotData?.linesCount < 30) { // check linesCount > 4 && < 10
+
                     if(state.gameFeature.length > 0) { // if clicked any game feature
                         state.gameFeature.map(gameFeature => { // cycle through the picked game features
 
                             //find the picked game feature in the game features array
-                            const isTrue = slotGame.slotData.tags.some(tag => tag == gameFeature) 
+                            const isTrue = game.slotData.tags.some(tag => tag == gameFeature) 
 
                             if(isTrue == true) { // if you find the picked game feature in the game array of featuress, PUSH
-                                state.filtered.push(slotGame)
+                                state.filtered.push(game)
                             }
                         })
                     } else if(state.gameFeature.length == 0) {
-                        state.filtered.push(slotGame)
+                        state.filtered.push(game)
                     }
                 }
             })
         break;
         case '3':
             state.filtered.length = 0 // array empty
-            state.slotGames.filter(slotGame => { // cycle through slot games
-                if(slotGame.slotData.linesCount > 29 && slotGame.slotData.linesCount < 50) { // check linesCount > 4 && < 10
+            state.games.filter(game => { // cycle through slot games
+                if(game?.slotData?.linesCount > 29 && game?.slotData?.linesCount < 50) { // check linesCount > 4 && < 10
                     if(state.gameFeature.length > 0) { // if clicked any game feature
                         state.gameFeature.map(gameFeature => { // cycle through the picked game features
 
                             //find the picked game feature in the game features array
-                            const isTrue = slotGame.slotData.tags.some(tag => tag == gameFeature) 
+                            const isTrue = game.slotData.tags.some(tag => tag == gameFeature) 
 
                             if(isTrue == true) { // if you find the picked game feature in the game array of featuress, PUSH
-                                state.filtered.push(slotGame)
+                                state.filtered.push(game)
                             }
                         })
                     } else if(state.gameFeature.length == 0) {
-                        state.filtered.push(slotGame)
+                        state.filtered.push(game)
                     }
                 }
             })
         break;
         case '4':
             state.filtered.length = 0 // array empty
-            state.slotGames.filter(slotGame => { // cycle through slot games
-                if(slotGame.slotData.linesCount > 50) { // check linesCount > 4 && < 10
+            state.games.filter(game => { // cycle through slot games
+                if(game?.slotData?.linesCount > 50) { // check linesCount > 4 && < 10
                     if(state.gameFeature.length > 0) { // if clicked any game feature
                         state.gameFeature.map(gameFeature => { // cycle through the picked game features
 
                             //find the picked game feature in the game features array
-                            const isTrue = slotGame.slotData.tags.some(tag => tag == gameFeature) 
+                            const isTrue = game.slotData.tags.some(tag => tag == gameFeature) 
 
                             if(isTrue == true) { // if you find the picked game feature in the game array of featuress, PUSH
-                                state.filtered.push(slotGame)
+                                state.filtered.push(game)
                             }
                         })
                     } else if(state.gameFeature.length == 0) {
-                        state.filtered.push(slotGame)
+                        state.filtered.push(game)
                     }
                 }
             })
         break;
     }
+
+    // const grouped = state.filtered
+    // const filteredGames = games?.reduce((grouped, game) => {
+    //     grouped[game.name] = grouped[game.name] ?? []
+    //     grouped[game.name].push(game)
+
+    //     return grouped
+    // }, {})
+    // state.filtered = filteredGames
 }
 
 const gameSlice = createSlice({
@@ -147,25 +156,33 @@ const gameSlice = createSlice({
                 }
             }
             filter(state)
+
+            if(state.filtered.length == 0) {
+                state.filteredMsg = 'Games not found'
+            }
         },
     },
     extraReducers(builder) {
-        builder.addCase(selectGames.fulfilled, (state, action) => {
-            state.games = action.payload
-            state.allGamesStatus = 'succeeded'
+        builder
+        .addCase(selectGames.pending, (state, action) => {
+            state.allGamesStatus = import.meta.env.VITE_LOADING
         })
-        builder.addCase(selectSlotGames.fulfilled, (state, action) => {
-            state.slotGames = action.payload
-            state.status = 'succeeded'
+        .addCase(selectGames.fulfilled, (state, action) => {
+            state.games = action.payload
+            state.allGamesStatus = import.meta.env.VITE_SUCCESS
+        })
+        .addCase(selectGames.rejected, (state, action) => {
+            state.allGamesStatus = import.meta.env.VITE_FAILED
+            state.allGamesError = action.error.message
         })
     }
 })
 
-export const getGameStatus = (state) => state.games.status
 export const getAllGameStatus = (state) => state.games.allGamesStatus
 export const getGames = (state) => state.games.games
-export const getSlotGames = (state) => state.games.slotGames
+export const getGamesError = (state) => state.games.allGamesError
 export const getFilteredGames = (state) => state.games.filtered
+export const getFilteredGamesMsg = (state) => state.games.filteredMsg
 
 export const { filterByLines, filteredByGameFeatures } = gameSlice.actions
 

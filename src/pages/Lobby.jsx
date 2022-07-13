@@ -1,7 +1,7 @@
 
 import { MojoTabsSection, MojoBox, LogoBox, MojoContainer, TopRightBox, Username, Wallet, MaterialUISwitch, TabActive, Tab,
-    MojoTabs } from '../helper/styles'
-import { useTheme, FormControlLabel, Box } from '@mui/material'
+    MojoTabs, Test } from '../helper/styles'
+import { useTheme, FormControlLabel, Box, Skeleton } from '@mui/material'
 
 import { useContext, useEffect } from "react"
 import { ColorModeContext } from '../helper/Context'
@@ -10,15 +10,19 @@ import SlotGames from '../components/SlotGames'
 import { useState } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
-import { getUser, selectUser } from "../store/userSlice"
+import { getUser, selectUser, getUserStatus, getUserError } from "../store/userSlice"
+import Error from '../components/Error'
 
 const Lobby = () => {
     const dispatch = useDispatch()
 
     const mojoTheme = useTheme()
     const colorMode = useContext(ColorModeContext)
-    const [openLiveCasino, setOpenLiveCasino] = useState(true)
-    const [slotGames, setSlotGames] = useState(false)
+    const [openLiveCasino, setOpenLiveCasino] = useState(false)
+    const [slotGames, setSlotGames] = useState(true)
+
+    const status = useSelector(getUserStatus)
+    const error = useSelector(getUserError)
     
     const handleLiveCasino = () => {
         setOpenLiveCasino(true)
@@ -31,7 +35,9 @@ const Lobby = () => {
     }
 
     useEffect(() => {
-        dispatch(selectUser())
+        if(status === import.meta.env.VITE_IDLE) {
+            dispatch(selectUser())
+        }
     }, [])
 
     const user = useSelector(getUser)
@@ -39,6 +45,7 @@ const Lobby = () => {
     return (
         <>
             <MojoBox>
+                {/* <Test /> */}
                 <MojoContainer>
                     <LogoBox variant="div" href='/'>
                         <img src="/src/img/logo.png" alt='Mojo logo' />
@@ -61,10 +68,22 @@ const Lobby = () => {
                             }
                         </MojoTabs>
                     </MojoTabsSection>
-
                     <TopRightBox>
-                        <Username variant='span'>{user?.username},</Username>
-                        <Wallet>{user?.currency === 'USD' ? '$' : ''}{user?.balance}</Wallet>
+                            {
+                                status === import.meta.env.VITE_FAILED ? 
+                                    <Error error={error} />
+                                : 
+                                    status === import.meta.env.VITE_LOADING ?
+                                        <>
+                                            <Skeleton variant='rectangle' animation='wave' width={120} height={20} />
+                                            <Skeleton variant='rectangle' animation='wave' width={120} height={20} />
+                                        </>
+                                    :
+                                        <>
+                                            <Username variant='span'>{user?.username + ','}</Username>
+                                            <Wallet>{user?.currency === 'USD' ? '$' + user?.balance : ''}</Wallet>
+                                        </>
+                            }
                         <FormControlLabel onClick={colorMode.toggleColorMode} control={<MaterialUISwitch defaultChecked />} />
                     </TopRightBox>
                 </MojoContainer>

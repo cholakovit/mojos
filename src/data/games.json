@@ -1,0 +1,1007 @@
+[
+  {
+    "name": "Fruity Reels",
+    "token": "fr",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/uxv13o2fxab20200414153140.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/4d4rhyhivxu20210222142525.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 2,
+      "hitRate": 1,
+      "linesCount": 20,
+      "tags": [2, 3, 4, 5, 6]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Dragon Tiger Dev",
+    "token": "dt-dev",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/temp/1ihs4qk1pcm20220518075628.jpg",
+        "videoUrl": "https://dev-media.7mojos.com/media/temp/3fsth3gxk1f20220518075629.mp4"
+      }
+    ],
+    "gameType": 7,
+    "categories": [1, 2, 3],
+    "isFeatured": false,
+    "hostUrl": "https://dev-live-casino-engine.7mojos.com",
+    "clientUrl": "https://qa-games.7mojos.com/1/",
+    "slotData": null,
+    "liveData": {
+      "lastResults": [2, 1, 1, 2, 2, 1, 1, 2, 1, 1],
+      "playersCount": 0,
+      "dealerName": "TQA",
+      "schedule": { "from": "", "to": "", "timezone": "" }
+    },
+    "betData": { "min": 1.0, "max": 250.0 }
+  },
+  {
+    "name": "40 Hot Twist",
+    "token": "40ht",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/h2n1xlqtuc520200601070143.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/m52wgdqa4so20210222142721.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 4,
+      "volatility": 3,
+      "hitRate": 3,
+      "linesCount": 40,
+      "tags": [2, 5, 6, 4, 3]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Bandidos Showdown",
+    "token": "bs",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/fxty1ntbcv220200529153359.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/t31ddauvzcd20210222142352.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 2,
+      "hitRate": 5,
+      "linesCount": 30,
+      "tags": [1, 3, 4, 5]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Dragon's Flower",
+    "token": "df",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/5m5sf2sghle20200414152834.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/ynzob3nwbus20210222142506.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 5,
+      "hitRate": 1,
+      "linesCount": 30,
+      "tags": [0, 3, 4, 5]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Infinite Wilds",
+    "token": "iw",
+    "thumbnails": [
+      {
+        "width": 550,
+        "height": 550,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/4bbza5ga1go20210629120903.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 764,
+        "height": 400,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/1qxmmxgwuuv20210629120904.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 190,
+        "height": 190,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/ygj5wmhnltk20210629120904.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 236,
+        "height": 110,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/fnduiqh1xih20210629120904.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/xhgddtpseoc20210629120904.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 337,
+        "height": 181,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/wzety4usbvk20210629120904.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 380,
+        "height": 380,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/x1fhk3p2thh20210629120904.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 400,
+        "height": 764,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/jdhsmcu51po20210629120904.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 500,
+        "height": 280,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/n3utovr40v520210629120904.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 500,
+        "height": 360,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/dphac1bk42g20210629120904.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 500,
+        "height": 500,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/nvoeshh2vlx20210629120904.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 10,
+    "categories": [0, 0],
+    "isFeatured": true,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/3/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 3,
+      "hitRate": 5,
+      "linesCount": 25,
+      "tags": [0, 4, 5]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Golden Vegas",
+    "token": "gv",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/r0zetxkwhx220200414153210.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/btxj5cwikyv20210222142412.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 2,
+      "hitRate": 3,
+      "linesCount": 30,
+      "tags": [1, 0, 3, 4, 5]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Adventure Saga",
+    "token": "as",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/ppdhxxbbhvd20200414151753.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/pqmcfe1cgqo20210222142746.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 3,
+      "hitRate": 3,
+      "linesCount": 30,
+      "tags": [0, 5, 3, 4]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "40 Fruity Reels",
+    "token": "40fr",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/g5um02vnn3u20200414153158.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/cxshe4ivuwp20210222142534.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 4,
+      "volatility": 2,
+      "hitRate": 5,
+      "linesCount": 40,
+      "tags": [2, 3, 4, 5, 6]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Ultra Classic Hot",
+    "token": "uch",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/vbfhm1xu2b020200414153539.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/jcn0pp3werz20210222142548.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 4,
+      "volatility": 2,
+      "hitRate": 1,
+      "linesCount": 40,
+      "tags": [5, 3, 4, 6]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Fruit Dash",
+    "token": "fd",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/oeq5dicmsz220200529153418.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 400,
+        "height": 764,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/atcg5p1hm5220210105160027.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/wlmk2hudrq020210222142612.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": [0],
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 4,
+      "volatility": 2,
+      "hitRate": 5,
+      "linesCount": 40,
+      "tags": [2, 6, 4, 3]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "80 Fruit Dash",
+    "token": "80fd",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/b4feyhescja20200529153444.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/py1ibbaio3m20210305130824.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": [0],
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 4,
+      "volatility": 4,
+      "hitRate": 3,
+      "linesCount": 80,
+      "tags": [2, 6, 4, 3]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "40 Fruity Reels SB",
+    "token": "40frsb",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/rx0kggeqnig20200618080044.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 4,
+      "volatility": 3,
+      "hitRate": 5,
+      "linesCount": 40,
+      "tags": [1, 5, 3, 4]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Hot Fortune Wheel",
+    "token": "hfw",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/yhtpwq4jfgk20200414153315.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/ki1xqfro2fq20210222142642.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 4,
+      "volatility": 4,
+      "hitRate": 1,
+      "linesCount": 40,
+      "tags": [1, 6, 5, 4, 3]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Hot Fortune Wheel 80",
+    "token": "hfw80",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/zdb5fx3cas220200414153328.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/m2kmrfxfz3j20210222142653.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 4,
+      "volatility": 2,
+      "hitRate": 5,
+      "linesCount": 80,
+      "tags": [1, 5, 6, 4, 3]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Wild Bandidos",
+    "token": "wb",
+    "thumbnails": [
+      {
+        "width": 550,
+        "height": 550,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/naxavbodgxe20210112101440.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/bjep5f5kd0220210112101440.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 400,
+        "height": 764,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/lxehlnupm4m20210112101440.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": [0],
+    "isFeatured": true,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 2,
+      "hitRate": 5,
+      "linesCount": 30,
+      "tags": [0, 3, 4, 5]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Big 5 Africa",
+    "token": "b5a",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/tn5qaagzbdg20200414151818.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 550,
+        "height": 550,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/n52v24jvtyi20210112102533.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/0k2jjcu1ocn20210112102533.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 400,
+        "height": 764,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/id5s41xhzgl20210112102533.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": [0],
+    "isFeatured": true,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 4,
+      "hitRate": 1,
+      "linesCount": 30,
+      "tags": [0, 2, 3, 4, 5]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Roulette Dev",
+    "token": "rl-dev",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/temp/4s3ulkf1fcc20220711121407.jpg",
+        "videoUrl": "https://dev-media.7mojos.com/media/temp/1myueluuna420220711121407.mp4"
+      }
+    ],
+    "gameType": 1,
+    "categories": [],
+    "isFeatured": false,
+    "hostUrl": "https://dev-live-casino-engine.7mojos.com",
+    "clientUrl": "https://qa-games.7mojos.com/1/",
+    "slotData": null,
+    "liveData": {
+      "lastResults": [14, 6, 17, 13, 11, 12, 0, 30, 9, 7],
+      "playersCount": 0,
+      "dealerName": "Magi",
+      "schedule": { "from": "", "to": "", "timezone": "GMT" }
+    },
+    "betData": { "min": 0.5, "max": 2000.0 }
+  },
+  {
+    "name": "Patrick's Riches",
+    "token": "pr",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/ltc4au0bked20200414153418.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 550,
+        "height": 550,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/tjsjlh3rpr120210112102342.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/ialgjvmsweg20210112102342.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 400,
+        "height": 764,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/y1ixo0ueao220210112102342.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": [0],
+    "isFeatured": true,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 4,
+      "volatility": 3,
+      "hitRate": 1,
+      "linesCount": 40,
+      "tags": [1, 0, 3, 4, 5]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "60 Ultra Classic Hot",
+    "token": "60uch",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/0poonowxhu320200414153553.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 550,
+        "height": 550,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/kavgaaklmzy20210112102411.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/fqsjxltnfnt20210112102411.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 400,
+        "height": 764,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/goibmytjijh20210112102411.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": [0],
+    "isFeatured": true,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 4,
+      "volatility": 4,
+      "hitRate": 5,
+      "linesCount": 60,
+      "tags": [5, 6, 4, 3]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Age of Cleopatra",
+    "token": "aoc",
+    "thumbnails": [
+      {
+        "width": 500,
+        "height": 500,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/axp30ynav4t20200414151805.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 550,
+        "height": 550,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/qcl51vludv220210112102522.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/n5n04w1gbjt20210112102522.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 400,
+        "height": 764,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/1ynwjetcawv20210112102522.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": [0],
+    "isFeatured": true,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 4,
+      "hitRate": 3,
+      "linesCount": 30,
+      "tags": [1, 3, 4, 5]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "20 Hot Twist",
+    "token": "20ht",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/yerdxhpcldh20200601070157.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 550,
+        "height": 550,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/a2btj1njygc20210112102622.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/gthv2dduyag20210112102622.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 400,
+        "height": 764,
+        "imageUrl": "https://dev-media.7mojos.com/media/thumbnails/352g5az20gb20210112102622.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": [0],
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 3,
+      "hitRate": 1,
+      "linesCount": 20,
+      "tags": [2, 5, 6, 4, 3]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Rune Wars",
+    "token": "rw",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/f13wu3gpncf20200601105045.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/5t3wvkvkcnz20210222142425.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 4,
+      "hitRate": 3,
+      "linesCount": 30,
+      "tags": [1, 0, 3, 4, 5]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Underwater Adventure",
+    "token": "ua",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/hxcocxwuygd20200414153608.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/uwlomtvu2vc20210222142435.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 4,
+      "volatility": 4,
+      "hitRate": 1,
+      "linesCount": 40,
+      "tags": [0, 3, 4, 5]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Lucky Fruit Lines",
+    "token": "lfl",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/ajdd4lf0ngv20200414153622.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/axn4buxexzo20210222142707.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 3,
+      "hitRate": 1,
+      "linesCount": 5,
+      "tags": [2, 5, 6, 4, 3]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Fortune Genie",
+    "token": "fg",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/tq2g3hgbkx320200414152850.png",
+        "videoUrl": ""
+      },
+      {
+        "width": 301,
+        "height": 180,
+        "imageUrl": "https://dev-media.7mojos.com/media/slotsthumbnails/aolysays3af20210222142452.png",
+        "videoUrl": ""
+      }
+    ],
+    "gameType": 0,
+    "categories": null,
+    "isFeatured": false,
+    "hostUrl": "https://dev-slots-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/2/",
+    "slotData": {
+      "reelsCount": 5,
+      "rowsCount": 3,
+      "volatility": 2,
+      "hitRate": 3,
+      "linesCount": 30,
+      "tags": [1, 3, 4, 5]
+    },
+    "liveData": null,
+    "betData": null
+  },
+  {
+    "name": "Blackjack Dev",
+    "token": "bj-dev",
+    "thumbnails": [],
+    "gameType": 2,
+    "categories": [],
+    "isFeatured": false,
+    "hostUrl": "https://dev-live-casino-engine.7mojos.com",
+    "clientUrl": "https://qa-games.7mojos.com/1/",
+    "slotData": null,
+    "liveData": {
+      "takenBoxes": [],
+      "playersCount": 0,
+      "dealerName": "Stanimir Dimitrov",
+      "schedule": { "from": "", "to": "", "timezone": "" }
+    },
+    "betData": { "min": 1.0, "max": 250.0 }
+  },
+  {
+    "name": "Baccarat Dev",
+    "token": "bc-dev",
+    "thumbnails": [
+      {
+        "width": -1,
+        "height": -1,
+        "imageUrl": "https://dev-media.7mojos.com/media/temp/uqc2jjfhvhw20220421072817.jpg",
+        "videoUrl": "https://dev-media.7mojos.com/media/temp/ttaldoniv3s20220421072817.mp4"
+      }
+    ],
+    "gameType": 6,
+    "categories": [],
+    "isFeatured": false,
+    "hostUrl": "https://dev-live-casino-engine.7mojos.com",
+    "clientUrl": "https://dev-games.7mojos.com/live/",
+    "slotData": null,
+    "liveData": {
+      "lastResults": [1, 0, 1, 2, 2, 1, 2, 1, 1, 1],
+      "playersCount": 0,
+      "dealerName": "TQA",
+      "schedule": { "from": "", "to": "", "timezone": "" }
+    },
+    "betData": { "min": 1.0, "max": 250.0 }
+  }
+]

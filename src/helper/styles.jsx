@@ -7,10 +7,15 @@ import Portal from '@mui/base/Portal'
 import FormControl from '@mui/material/FormControl';
 import Divider from '@mui/material/Divider';
 
+export const Test = styled(Box)(({theme}) => {
+    console.log('theme', theme.palette.primary)
+})
+
+
 export const MojoBox = styled(Box)(({theme}) => ({
     backgroundColor: theme.palette.mode === 'dark' ? theme.palette.secondary.dark : theme.palette.secondary.light,
-    borderBottom: '1px solid #e56d1d',
-    boxShadow: '0px 0px 1px #f8f9fa',
+    borderBottom: theme.palette.mode === 'dark' ? theme.palette.primary.orangeBorder : theme.palette.primary.orangeBorder,
+    boxShadow: theme.palette.mode === 'dark' ? theme.palette.primary.orangeBorderShadow : theme.palette.primary.orangeBorderShadow,
 }))
 
 export const MojoContainer = styled(Container)(({theme}) => ({
@@ -34,7 +39,7 @@ export const Wallet = styled(Typography)(({theme}) => ({
     margin: '16px 20px 10px 0px',
     fontSize: '20px',
     fontWeight: 'bold',
-    background: '-webkit-linear-gradient(270deg, #ea8417 10%, #fbcf3d 60%)',
+    background: theme.palette.mode === 'dark' ? theme.palette.primary.orangeGradient : theme.palette.primary.orangeGradient,
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
 }))
@@ -53,7 +58,7 @@ export const LogoBox = styled(Link)({
 export const MojoTabsSection = styled(Box)(({theme}) => ({
     width: '50%',
     display: 'flex',
-    margin: '2px 0 -2px 0',
+    margin: '3px 0 -3px 0',
 }))
 
 export const MojoTabs = styled(ClickAwayListener)({
@@ -64,15 +69,15 @@ export const Tab = styled(Typography)(({theme}) => ({
     margin: '16px 0 0px 0px',
     width: '50%',
     height: '50px',
-    
-    background: '-webkit-linear-gradient(270deg, #ea8417 10%, #fbcf3d 60%)',
+    //orangeGradient
+    background: theme.palette.mode === 'dark' ? theme.palette.primary.orangeGradient : theme.palette.primary.orangeGradient,
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
 
     fontWeight: 'bold',
-    borderLeft: '1px solid #fd6e0f',
-    borderTop: '1px solid #e56d1d',
-    borderRight: '1px solid #e56d1d',
+    borderLeft: theme.palette.mode === 'dark' ? theme.palette.primary.orangeBorder : theme.palette.primary.orangeBorder,
+    borderTop: theme.palette.mode === 'dark' ? theme.palette.primary.orangeBorder : theme.palette.primary.orangeBorder,
+    borderRight: theme.palette.mode === 'dark' ? theme.palette.primary.orangeBorder : theme.palette.primary.orangeBorder,
     borderRadius: '0',
     cursor: 'pointer',
     textAlign: 'center',
@@ -84,10 +89,10 @@ export const TabActive = styled(Typography)(({theme}) => ({
     margin: '16px 0 0 0',
     width: '50%',
     height: '50px',
-    borderLeft: '1px solid #e56d1d',
-    borderTop: '1px solid #e56d1d',
-    borderRight: '1px solid #e56d1d',
-    boxShadow: 'inset -6px 0px 6px -6px #888, inset 0px 6px 6px -6px #888, inset 6px 0px 6px -6px #888',
+    borderLeft: theme.palette.mode === 'dark' ? theme.palette.primary.orangeBorder : theme.palette.primary.orangeBorder,
+    borderTop: theme.palette.mode === 'dark' ? theme.palette.primary.orangeBorder : theme.palette.primary.orangeBorder,
+    borderRight: theme.palette.mode === 'dark' ? theme.palette.primary.orangeBorder : theme.palette.primary.orangeBorder,
+    boxShadow: theme.palette.mode === 'dark' ? theme.palette.primary.tabBoxShadow : theme.palette.primary.tabBoxShadow,
     borderRadius: '0',
     cursor: 'pointer',
     padding: '15px',
@@ -103,8 +108,9 @@ export const BoxLine = styled(Box)(({theme}) => ({
     width: '100%',
     height: '50px',
     margin: '40px 0 20px 0',
-    borderTop: '5px solid #291E3C',
-    borderBottom: '5px solid #291E3C'
+    //mojoDividerBorder
+    borderTop: theme.palette.mode === 'dark' ? theme.palette.primary.mojoDividerBorder : theme.palette.primary.mojoDividerBorder,
+    borderBottom: theme.palette.mode === 'dark' ? theme.palette.primary.mojoDividerBorder : theme.palette.primary.mojoDividerBorder,
 }))
 
 export const BoxLineTitleContainer = styled(Container)(({theme}) => ({
@@ -118,24 +124,39 @@ export const SlotsLabel = styled(Typography)(({theme}) => ({
     flexGrow: 1,
 }))
 
-export const FilterButton = styled(Button)(({theme}) => ({
+export const FilterButton = styled(Typography)(({theme}) => ({
     backgroundColor: theme.palette.mode === 'dark' ? theme.palette.primary.pinkButton : theme.palette.primary.pinkButton,
     borderRadius: 0,
-    padding: '12px',
+    padding: '2px 10px',
     fontSize: '12px',
+    display: 'flex',
+    margin: '0 20px 0 0',
+    cursor: 'pointer',
+    height: '28px',
     width: '10%',
     ':hover': {
         backgroundColor: theme.palette.mode === 'dark' ? theme.palette.primary.pinkButtonHover : theme.palette.primary.pinkButtonHover,
     }
 }))
 
+// export const FilterButton = styled(Button)(({theme}) => ({
+//     backgroundColor: theme.palette.mode === 'dark' ? theme.palette.primary.pinkButton : theme.palette.primary.pinkButton,
+//     borderRadius: 0,
+//     padding: '12px',
+//     fontSize: '12px',
+//     width: '10%',
+//     ':hover': {
+//         backgroundColor: theme.palette.mode === 'dark' ? theme.palette.primary.pinkButtonHover : theme.palette.primary.pinkButtonHover,
+//     }
+// }))
+
 export const FilterOptions = styled(Box)(({theme}) => ({
     backgroundColor: theme.palette.mode === 'dark' ? theme.palette.secondary.dark : theme.palette.secondary.light,
     display: 'flex',
     width: '100%',
     margin: '40px 0 20px 0',
-    borderTop: '5px solid #291E3C',
-    borderBottom: '5px solid #291E3C'
+    borderTop: theme.palette.mode === 'dark' ? theme.palette.primary.mojoDividerBorder : theme.palette.primary.mojoDividerBorder,
+    borderBottom: theme.palette.mode === 'dark' ? theme.palette.primary.mojoDividerBorder : theme.palette.primary.mojoDividerBorder,
 }))
 
 export const FilterBox = styled(Box)(({theme}) => ({
@@ -164,7 +185,7 @@ export const MojoDivider = styled(Divider)(({theme}) => ({
     margin: '5px 0 10px 0'
 }))
 
-export const FeaturedGames = styled(Container)({
+export const FeaturedGamesContainer = styled(Container)({
     overflow: 'hidden',
     display: 'flex',
 })
@@ -203,7 +224,8 @@ export const ImageBox = styled(Link)(({theme}) => ({
     width: '260px',
     display: 'block',
     border: '1px solid',
-    borderImage: 'linear-gradient(360deg, #c30d6b, #efd614) 1',
+    //imgBoxBorder
+    borderImage: theme.palette.mode === 'dark' ? theme.palette.primary.imgBoxBorder : theme.palette.primary.imgBoxBorder,
     textDecoration: 'none',
     '& img': {
         width: '258px',

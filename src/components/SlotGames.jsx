@@ -1,11 +1,14 @@
-import { GameLine, BoxLine, FeaturedGameBox, BoxLineTitleContainer, FilterButton, SlotsLabel, FilterBox, LinesFilterBox, 
-    FeaturedGamesFilterBox, MojoDivider, SlotGameBox, FeaturedGames, FilterOptions, ImageBox } from '../helper/styles'
+import { GameLine, BoxLine, BoxLineTitleContainer, FilterButton, SlotsLabel, FilterBox, LinesFilterBox, 
+    FeaturedGamesFilterBox, MojoDivider, SlotGameBox, FilterOptions, ImageBox } from '../helper/styles'
+import { filterByLines, filteredByGameFeatures, getFilteredGames, getFilteredGamesMsg, getGames, getAllGameStatus, 
+    getGamesError, selectGames } from "../store/gameSlice"
+
 import { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { selectSlotGames, getGameStatus, filterByLines, filteredByGameFeatures, getFilteredGames, 
-    getGames, getAllGameStatus, selectGames } from "../store/gameSlice"
+import FeaturedGames from './FeaturedGames'
+import Skeletons from './Skeletons'
 
-import { Box, Button } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -18,39 +21,30 @@ import FormGroup from '@mui/material/FormGroup';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 
-import Portal from '@mui/base/Portal';
-
 const SlotGames = () => {
     const dispatch = useDispatch()
+    const [filteredGamesNotFoundMsg, setFilteredGamesNotFoundMsg] = useState()
     const [slotGames, setSlotGames] = useState()
-    const [showFilters, setShowFilters] = useState(false)
-    const [allGames, setAllGames] = useState()
+    const [showFilters, setShowFilters] = useState(true)
     const container = useRef(null)
-    const gameStatus = useSelector(getGameStatus)
-    const allGameStatus = useSelector(getAllGameStatus)
-    const mojoGames = useSelector(getGames)    
 
-    console.log('mojoGames', mojoGames)
+    const games = useSelector(getGames)
+    const status = useSelector(getAllGameStatus)
+    const error = useSelector(getGamesError)
+
+    //temporary
+    useEffect(() => {
+        if(status === import.meta.env.VITE_IDLE) {
+            dispatch(selectGames())
+        }
+    }, [])
 
     const handleFilters = () => {
         setShowFilters(!showFilters)
     }
 
-    useEffect(() => {
-        if(gameStatus === 'idle') {
-            dispatch(selectSlotGames())
-        }
-        if(allGameStatus === 'idle') {
-            dispatch(selectGames())
-        }
-    }, [])
-
-    //const allGames = useSelector(getGames)
-
-    const featuredSlotGames = mojoGames?.filter(game => game.isFeatured === true)
-    //console.log('featuredSlotGames', featuredSlotGames)
-
     const handleLines = (lineValue) => {
+        
         if(lineValue) {
             dispatch(filterByLines(lineValue))        
         }
@@ -62,51 +56,41 @@ const SlotGames = () => {
         }
     }
 
-    const filteredGames = useSelector(getFilteredGames)
+    let filteredGames = useSelector(getFilteredGames)
+    const filteredGamesMsg = useSelector(getFilteredGamesMsg)
 
     useEffect(() => {
         if(filteredGames.length > 0) {
+            
+            filteredGames = Array.from(new Set(filteredGames));
+
             setSlotGames(filteredGames)
+
         } else {
-            //setSlotGames(allSlotGames)
-            //setSlotGames(null)
-            setSlotGames(mojoGames)
+            if(filteredGamesMsg == null) {
+                setSlotGames(games)
+            } else {
+                setSlotGames(null)
+            }
+            
         }
-    }, [filteredGames])
+    }, [filteredGames, filteredGamesMsg])
 
     return (
         <Box>
-            <BoxLine>
-                <BoxLineTitleContainer>Featured Games</BoxLineTitleContainer>
-            </BoxLine>
-            <FeaturedGames>
-                {featuredSlotGames?.map((game, index) => 
-                    <FeaturedGameBox key={index} href={game.clientUrl}>
-                                            { 
-                    game.thumbnails[6] ?
-                        <img src={game.thumbnails[6]?.imageUrl} alt={game.name}
-                            loading="lazy" />
-                            : game.thumbnails[3] ?
-                                <img src={game.thumbnails[3]?.imageUrl} alt={game.name}
-                                loading="lazy" /> 
-                            : ''}
-                    </FeaturedGameBox>
-                )}
-            </FeaturedGames>
+            <FeaturedGames />
             
             <BoxLine>
                 <BoxLineTitleContainer>
                     <SlotsLabel variant='span'>Slots</SlotsLabel>
                     <FilterButton onClick={handleFilters}> 
-                        Filters
+                        <Typography>Filters</Typography>
                         {showFilters ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                     </FilterButton>
                 </BoxLineTitleContainer>
-                
             </BoxLine> 
             
             <GameLine>
-
                 {showFilters ? (
                 <FilterOptions container={container.current}>
 
@@ -124,7 +108,6 @@ const SlotGames = () => {
                                 onClick={ (e) => { handleLines(e.target.value) } } />
                         </RadioGroup>
                     </LinesFilterBox>
-
 
                     <GameLine>
                         <FeaturedGamesFilterBox component="fieldset">
@@ -156,15 +139,27 @@ const SlotGames = () => {
             </GameLine>
 
             <SlotGameBox>
-            {slotGames?.map((game, index) => 
-                <ImageBox key={index} href={game.clientUrl}>
-                    {game.thumbnails[0] ?
-                        <img src={game.thumbnails[0]?.imageUrl} alt={game.name} loading="lazy" />
-                    : game.thumbnails[1] ?
-                        <img src={game.thumbnails[1]?.imageUrl} alt={game.name} loading="lazy" /> 
-                    : ''}
-                </ImageBox>
-            )}
+            {status === import.meta.env.VITE_FAILED ? 
+                    <BoxLine>
+                        <BoxLineTitleContainer>
+                            <Error error={error} />
+                        </BoxLineTitleContainer>
+                    </BoxLine>
+                : 
+                    status === import.meta.env.VITE_LOADING ?
+                        <Skeletons flag={4} />
+                    :
+                    filteredGamesMsg ? <BoxLine><BoxLineTitleContainer>{filteredGamesMsg}</BoxLineTitleContainer></BoxLine> :
+                        slotGames?.map((game, index) => 
+                            <ImageBox key={index} href={game.clientUrl}>
+                                {game.thumbnails[0] ?
+                                    <img src={game.thumbnails[0]?.imageUrl} alt={game.name} loading="lazy" />
+                                : game.thumbnails[1] ?
+                                    <img src={game.thumbnails[1]?.imageUrl} alt={game.name} loading="lazy" /> 
+                                : ''}   
+                            </ImageBox>
+                        )
+            }
             </SlotGameBox>
         </Box>
     )

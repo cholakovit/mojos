@@ -18,8 +18,8 @@ const Lobby = () => {
 
     const mojoTheme = useTheme()
     const colorMode = useContext(ColorModeContext)
-    const [openLiveCasino, setOpenLiveCasino] = useState(false)
-    const [slotGames, setSlotGames] = useState(true)
+    const [openLiveCasino, setOpenLiveCasino] = useState(true)
+    const [slotGames, setSlotGames] = useState(false)
 
     const status = useSelector(getUserStatus)
     const error = useSelector(getUserError)

@@ -7,6 +7,7 @@ import {
 import { getGames, getAllGameStatus, getGamesError } from "../store/gameSlice";
 import { useSelector } from "react-redux";
 import Skeletons from "./Skeletons";
+import GameLabels from "./GameLabels";
 
 const FeaturedGames = () => {
   const fGames = useSelector(getGames);
@@ -14,6 +15,8 @@ const FeaturedGames = () => {
   const error = useSelector(getGamesError);
 
   const featuredGames = fGames?.filter((game) => game.isFeatured === true);
+
+  console.log('featuredGames', featuredGames)
 
   return (
     <>
@@ -32,6 +35,7 @@ const FeaturedGames = () => {
         ) : (
           featuredGames?.map((game, index) => (
             <FeaturedGameBox key={index} href={game.clientUrl}>
+              <GameLabels game={game} />
               {" "}
               {game.thumbnails[6] ? (
                 <img
@@ -45,9 +49,14 @@ const FeaturedGames = () => {
                   alt={game.name}
                   loading="lazy"
                 />
-              ) : (
-                ""
-              )}
+              ) : game.thumbnails[2] ? (
+                <img
+                  src={game.thumbnails[2]?.imageUrl}
+                  alt={game.name}
+                  loading="lazy"
+                />
+              ) : ''
+              }
             </FeaturedGameBox>
           ))
         )}

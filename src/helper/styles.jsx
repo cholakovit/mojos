@@ -8,7 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import Divider from '@mui/material/Divider';
 
 export const Test = styled(Box)(({theme}) => {
-    console.log('theme', theme.palette.primary)
+    console.log('theme', theme.palette.text.primary.light)
 })
 
 
@@ -30,6 +30,7 @@ export const TopRightBox = styled(Box)(({theme}) => ({
 }))
 
 export const Username = styled(Typography)(({theme}) => ({
+    color: theme.palette.mode === 'dark' ? theme.palette.text.main : theme.palette.text.main,
     margin: '20px 10px 0px 10px',
     fontSize: '14px'
 }))
@@ -93,6 +94,7 @@ export const TabActive = styled(Typography)(({theme}) => ({
     borderTop: theme.palette.mode === 'dark' ? theme.palette.primary.orangeBorder : theme.palette.primary.orangeBorder,
     borderRight: theme.palette.mode === 'dark' ? theme.palette.primary.orangeBorder : theme.palette.primary.orangeBorder,
     boxShadow: theme.palette.mode === 'dark' ? theme.palette.primary.tabBoxShadow : theme.palette.primary.tabBoxShadow,
+    color: theme.palette.mode === 'dark' ? theme.palette.text.main : theme.palette.text.main,
     borderRadius: '0',
     cursor: 'pointer',
     padding: '15px',
@@ -114,6 +116,7 @@ export const BoxLine = styled(Box)(({theme}) => ({
 }))
 
 export const BoxLineTitleContainer = styled(Container)(({theme}) => ({
+    color: theme.palette.mode === 'dark' ? theme.palette.text.main : theme.palette.text.main,
     padding: '8px 0px',
     display: 'flex',
 }))
@@ -165,19 +168,19 @@ export const FilterBox = styled(Box)(({theme}) => ({
 
 export const LinesFilterBox = styled(FormControl)(({theme}) => ({
     margin: '20px',
-    color: '#fff',
+    color: theme.palette.mode === 'dark' ? theme.palette.text.main : theme.palette.text.main,
     width: '30%',
     '& legend': {
-        color: '#fff',
+        color: theme.palette.mode === 'dark' ? theme.palette.text.main : theme.palette.text.main,
     }
 }))
 
 export const FeaturedGamesFilterBox = styled(FormControl)(({theme}) => ({
     margin: '20px',
-    color: '#fff',
+    color: theme.palette.mode === 'dark' ? theme.palette.text.main : theme.palette.text.main,
     width: '30%',
     '& legend': {
-        color: '#fff'
+        color: theme.palette.mode === 'dark' ? theme.palette.text.main : theme.palette.text.main,
     }
 }))
 
@@ -188,6 +191,7 @@ export const MojoDivider = styled(Divider)(({theme}) => ({
 export const FeaturedGamesContainer = styled(Container)({
     overflow: 'hidden',
     display: 'flex',
+    width: '2200px'
 })
 
 export const LiveCasinoImgSection = styled(Container)({
@@ -208,6 +212,20 @@ export const SlotGameBox = styled(Container)({
 
 
 export const FeaturedGameBox = styled(Link)(({theme}) => ({
+    margin: '10px 35px 0 0',
+    width: '260px!important',
+    position: 'relative',
+    display: 'block',
+    textDecoration: 'none',
+    '& img': {
+        width: '258px',
+        height: '499px',
+        display: 'block'
+    }
+}))
+
+export const FeaturedGameBox2 = styled(Link)(({theme}) => ({
+    
     margin: '10px 30px 0 0',
     width: '100%',
     display: 'block',
@@ -224,6 +242,8 @@ export const ImageBox = styled(Link)(({theme}) => ({
     width: '260px',
     display: 'block',
     border: '1px solid',
+    position: 'relative',
+    overflow: 'hidden',
     //imgBoxBorder
     borderImage: theme.palette.mode === 'dark' ? theme.palette.primary.imgBoxBorder : theme.palette.primary.imgBoxBorder,
     textDecoration: 'none',
@@ -234,23 +254,50 @@ export const ImageBox = styled(Link)(({theme}) => ({
     }
 }))
 
+export const GameLabelTags = styled(Typography)(({theme}) => ({
+    position: 'absolute',
+    left: '54%',
+    width: '49%',
+    margin: '-2px 0 0 0',
+    padding: '3px 8px',
+}))
+
+export const GameLabel = styled(Typography)(({theme}) => ({
+    fontWeight: 'bold',
+    fontSize: '12px',
+    textAlign: 'right',
+    textTransform: 'uppercase',
+    border: theme.palette.mode === 'dark' ? theme.palette.primary.gameLabelBorder : theme.palette.primary.gameLabelBorder,
+    backgroundColor: theme.palette.mode === 'dark' ? theme.palette.primary.gameLabelBg : theme.palette.primary.gameLabelBg,
+    padding: '2px 6px',
+    margin: '2px',
+    overflow: 'hidden',
+    opacity: '0.8',
+    '& span': {
+        color: theme.palette.mode === 'dark' ? theme.palette.text.gameLabelNumber : theme.palette.text.gameLabelNumber,
+    },
+    '::first-word': {
+        color: 'green'
+    }
+}))
+
 export const ImageBoxContent = styled(Typography)(({theme}) => ({
     backgroundColor: theme.palette.mode === 'dark' ? theme.palette.secondary.dark : theme.palette.secondary.light,
-    color: theme.palette.mode === 'dark' ? theme.palette.grey : theme.palette.secondary.dark,
     width: '100%',
     display: 'flex',
     padding: '10px 5px',
-    //border: '1px solid yellow',
 }))
 
 export const ImageBoxGameName = styled(Typography)(({theme}) => ({
+    color: theme.palette.mode === 'dark' ? theme.palette.text.main : theme.palette.text.main,
     width: '72%',
 }))
 
 export const GamePlayersQty = styled(Typography)(({theme}) => ({
     width: '28%',
     display: 'flex',
-    color: theme.palette.mode === 'dark' ? theme.palette.secondary.main : theme.palette.secondary.dark,
+    //color: theme.palette.mode === 'dark' ? theme.palette.secondary.main : theme.palette.secondary.dark,
+    color: theme.palette.mode === 'dark' ? theme.palette.secondary.main : theme.palette.text.main,
     fontSize: '24px',
     margin: '-5px 0 0 0',
     '& img': {

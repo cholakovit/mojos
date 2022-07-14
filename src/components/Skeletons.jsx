@@ -67,7 +67,12 @@ const Skeletons = ({flag}) => {
                             <ImageBox>
                                 <Skeleton variant='rectangle' animation='wave' width={260} height={177} />
                             </ImageBox>
-                        </>   
+                        </>,
+                    '5' :
+                        <>
+                            <Skeleton variant='rectangle' animation='wave' width={120} height={20} />
+                            <Skeleton variant='rectangle' animation='wave' width={120} height={20} />
+                        </>
                 }[flag]
             }
         </>

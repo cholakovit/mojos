@@ -12,6 +12,7 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUser, selectUser, getUserStatus, getUserError } from "../store/userSlice"
 import Error from '../components/Error'
+import Skeletons from '../components/Skeletons'
 
 const Lobby = () => {
     const dispatch = useDispatch()
@@ -45,7 +46,7 @@ const Lobby = () => {
     return (
         <>
             <MojoBox>
-                {/* <Test /> */}
+                <Test />
                 <MojoContainer>
                     <LogoBox variant="div" href='/'>
                         <img src="/src/img/logo.png" alt='Mojo logo' />
@@ -74,10 +75,7 @@ const Lobby = () => {
                                     <Error error={error} />
                                 : 
                                     status === import.meta.env.VITE_LOADING ?
-                                        <>
-                                            <Skeleton variant='rectangle' animation='wave' width={120} height={20} />
-                                            <Skeleton variant='rectangle' animation='wave' width={120} height={20} />
-                                        </>
+                                        <Skeletons flag={5} />
                                     :
                                         <>
                                             <Username variant='span'>{user?.username + ','}</Username>

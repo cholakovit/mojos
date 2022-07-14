@@ -6,6 +6,7 @@ import { filterByLines, filteredByGameFeatures, getFilteredGames, getFilteredGam
 import { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import FeaturedGames from './FeaturedGames'
+import GameLabels from './GameLabels'
 import Skeletons from './Skeletons'
 
 import { Box, Typography } from '@mui/material'
@@ -75,6 +76,8 @@ const SlotGames = () => {
             
         }
     }, [filteredGames, filteredGamesMsg])
+
+    console.log('games', games[0].slotData)
 
     return (
         <Box>
@@ -152,11 +155,12 @@ const SlotGames = () => {
                     filteredGamesMsg ? <BoxLine><BoxLineTitleContainer>{filteredGamesMsg}</BoxLineTitleContainer></BoxLine> :
                         slotGames?.map((game, index) => 
                             <ImageBox key={index} href={game.clientUrl}>
+                                <GameLabels game={game} />
                                 {game.thumbnails[0] ?
                                     <img src={game.thumbnails[0]?.imageUrl} alt={game.name} loading="lazy" />
                                 : game.thumbnails[1] ?
                                     <img src={game.thumbnails[1]?.imageUrl} alt={game.name} loading="lazy" /> 
-                                : ''}   
+                                : ''}
                             </ImageBox>
                         )
             }

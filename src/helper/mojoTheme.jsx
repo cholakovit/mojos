@@ -14,7 +14,7 @@ export const mojoTheme = (mode) => {
                                 margin: 0,
                                 mode,
                                 ...(mode === 'light' ? { 
-                                    backgroundColor: "#9e82e9",
+                                    backgroundColor: "#31254a",
                                     backgroundImage:'url(./src/img/background.svg)',
                                 } : { 
                                     backgroundColor: "#1f1530",
@@ -30,31 +30,33 @@ export const mojoTheme = (mode) => {
                     ? {
                         // palette values for light mode
                         text: {
-                          primary: {
-                            light: '#59468f',
-                            main: '#372e50',
-                            dark: '#17141f'
-                        },
-                          secondary: grey[800],
+                            main: '#eb9148',
+                            gameLabelNumber: 'yellow'
                         },
                         primary: {
-                            orangeBorder: '1px solid #110e0c',
+                            orangeBorder: '1px solid #f3973b',
                             main: '#fff',
                             orangeBorderShadow: '0px 0px 2px #f8f9fa',
                             tabBoxShadow: 'inset -6px 0px 6px -6px #f8f9fa, inset 0px 6px 6px -6px #f8f9fa, inset 6px 0px 6px -6px #f8f9fa',
                             orangeGradient: '-webkit-linear-gradient(270deg, #fbcf3d 60%, #ea8417 10%)',
-                            mojoDividerBorder: '5px solid #6c3fba',
-                            imgBoxBorder: 'linear-gradient(360deg, #620334, #a89500) 1'
+                            mojoDividerBorder: '5px solid #644b93',
+                            imgBoxBorder: 'linear-gradient(360deg, #620334, #a89500) 1',
+                            gameLabelBorder: '1px solid #ff2b9f',
+                            gameLabelBg: '#20183a'
                         },
                         secondary: {
-                            light: '#785fbc',
-                            tab: '#9e82e9',
+                            light: '#3b2a61',
+                            tab: '#31254a',
                             main: '#8383ae',
                             dark: '#17141f'
                         },
                       }
                     : {
                         // palette values for dark mode
+                        text: {
+                            main: '#fff',
+                            gameLabelNumber: 'yellow'
+                        },
                         primary: {
                             light: '#f0f0f0',
                             main: '#e2e2e2',
@@ -66,23 +68,15 @@ export const mojoTheme = (mode) => {
                             tabBoxShadow: 'inset -6px 0px 4px -6px #f8f9fa, inset 0px 6px 4px -6px #f8f9fa, inset 6px 0px 4px -6px #f8f9fa',
                             orangeGradient: '-webkit-linear-gradient(270deg, #ea8417 10%, #fbcf3d 60%)',
                             mojoDividerBorder: '5px solid #291E3C',
-                            imgBoxBorder: 'linear-gradient(360deg, #c30d6b, #efd614) 1'
+                            imgBoxBorder: 'linear-gradient(360deg, #c30d6b, #efd614) 1',
+                            gameLabelBorder: '1px solid #ff2b9f',
+                            gameLabelBg: '#20183a'
                         },
                         secondary: {
                             light: '#59468f',
                             main: '#856bc6',
                             dark: '#17141f'
-                        },
-                        cardHeadDark: grey[600],
-                        // divider: grey[700],
-                        // background: {
-                        //   default: grey[900],
-                        //   paper: grey[900],
-                        // },
-                        // text: {
-                        //   primary: '#fff',
-                        //   secondary: grey[500],
-                        // },
+                        }
                       }),
 
                 }

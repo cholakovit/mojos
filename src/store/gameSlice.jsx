@@ -19,6 +19,23 @@ export const selectGames = createAsyncThunk('games/games', async () => {
     return games.data
 })
 
+const checkGameFeature = (state, game) => {
+    if(state.gameFeature.length > 0) { // if clicked any game feature
+        state.gameFeature.map(gameFeature => { // cycle through the picked game features
+
+            //find the picked game feature in the game features array
+            const isTrue = game.slotData.tags.some(tag => tag == gameFeature) 
+            //const isTrue2 = state.filtered.some(filteredGame => filteredGame.name == game.name)
+
+            if(isTrue == true) { // if you find the picked game feature in the game array of featuress, PUSH
+                state.filtered.push(game)
+            }
+        })
+    } else if(state.gameFeature.length == 0) {
+        state.filtered.push(game)
+    }
+}
+
 const filter = (state) => {
 
     state.filtered.length = 0
@@ -34,52 +51,20 @@ const filter = (state) => {
                     }
                 })
             })
-
         break;
         case '1':
             state.filtered.length = 0 // array empty
             state.games.filter(game => { // cycle through slot games
-//console.log('game.slotData.linesCount', current(game?.slotData)); 
                 if(game?.slotData?.linesCount > 4 && game?.slotData?.linesCount < 10) { // check linesCount > 4 && < 10
-                    if(state.gameFeature.length > 0) { // if clicked any game feature
-                        state.gameFeature.map(gameFeature => { // cycle through the picked game features
-
-                            //find the picked game feature in the game features array
-                            const isTrue = game.slotData.tags.some(tag => tag == gameFeature) 
-                            //const isTrue2 = state.filtered.some(filteredGame => filteredGame.name == game.name)
-
-                            if(isTrue == true) { // if you find the picked game feature in the game array of featuress, PUSH
-                                state.filtered.push(game)
-                            }
-                        })
-                    } else if(state.gameFeature.length == 0) {
-                        state.filtered.push(game)
-                    }
+                    checkGameFeature(state, game)
                 }
             })
-
-
         break;
-
         case '2':
             state.filtered.length = 0 // array empty
             state.games.filter(game => { // cycle through slot games
-
                 if(game?.slotData?.linesCount > 9 && game?.slotData?.linesCount < 30) { // check linesCount > 4 && < 10
-
-                    if(state.gameFeature.length > 0) { // if clicked any game feature
-                        state.gameFeature.map(gameFeature => { // cycle through the picked game features
-
-                            //find the picked game feature in the game features array
-                            const isTrue = game.slotData.tags.some(tag => tag == gameFeature) 
-
-                            if(isTrue == true) { // if you find the picked game feature in the game array of featuress, PUSH
-                                state.filtered.push(game)
-                            }
-                        })
-                    } else if(state.gameFeature.length == 0) {
-                        state.filtered.push(game)
-                    }
+                    checkGameFeature(state, game)
                 }
             })
         break;
@@ -87,19 +72,7 @@ const filter = (state) => {
             state.filtered.length = 0 // array empty
             state.games.filter(game => { // cycle through slot games
                 if(game?.slotData?.linesCount > 29 && game?.slotData?.linesCount < 50) { // check linesCount > 4 && < 10
-                    if(state.gameFeature.length > 0) { // if clicked any game feature
-                        state.gameFeature.map(gameFeature => { // cycle through the picked game features
-
-                            //find the picked game feature in the game features array
-                            const isTrue = game.slotData.tags.some(tag => tag == gameFeature) 
-
-                            if(isTrue == true) { // if you find the picked game feature in the game array of featuress, PUSH
-                                state.filtered.push(game)
-                            }
-                        })
-                    } else if(state.gameFeature.length == 0) {
-                        state.filtered.push(game)
-                    }
+                    checkGameFeature(state, game)
                 }
             })
         break;
@@ -107,32 +80,11 @@ const filter = (state) => {
             state.filtered.length = 0 // array empty
             state.games.filter(game => { // cycle through slot games
                 if(game?.slotData?.linesCount > 50) { // check linesCount > 4 && < 10
-                    if(state.gameFeature.length > 0) { // if clicked any game feature
-                        state.gameFeature.map(gameFeature => { // cycle through the picked game features
-
-                            //find the picked game feature in the game features array
-                            const isTrue = game.slotData.tags.some(tag => tag == gameFeature) 
-
-                            if(isTrue == true) { // if you find the picked game feature in the game array of featuress, PUSH
-                                state.filtered.push(game)
-                            }
-                        })
-                    } else if(state.gameFeature.length == 0) {
-                        state.filtered.push(game)
-                    }
+                    checkGameFeature(state, game)
                 }
             })
         break;
     }
-
-    // const grouped = state.filtered
-    // const filteredGames = games?.reduce((grouped, game) => {
-    //     grouped[game.name] = grouped[game.name] ?? []
-    //     grouped[game.name].push(game)
-
-    //     return grouped
-    // }, {})
-    // state.filtered = filteredGames
 }
 
 const gameSlice = createSlice({

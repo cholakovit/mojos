@@ -244,7 +244,6 @@ export const ImageBox = styled(Link)(({theme}) => ({
     border: '1px solid',
     position: 'relative',
     overflow: 'hidden',
-    //imgBoxBorder
     borderImage: theme.palette.mode === 'dark' ? theme.palette.primary.imgBoxBorder : theme.palette.primary.imgBoxBorder,
     textDecoration: 'none',
     '& img': {
@@ -252,6 +251,18 @@ export const ImageBox = styled(Link)(({theme}) => ({
         height: '177px',
         display: 'block'
     }
+}))
+
+export const ImageHolder = styled(Link)(({theme}) => ({
+    border: '1px solid red',
+    display: 'block',
+
+}))
+
+export const VideoHolder = styled(Link)(({theme}) => ({
+    border: '1px solid green',
+    display: 'none',
+
 }))
 
 export const GameLabelTags = styled(Typography)(({theme}) => ({

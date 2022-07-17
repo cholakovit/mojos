@@ -1,7 +1,7 @@
-
+import { GameTooltip } from "../helper/styles"
 
 const GamePic = ({game, type}) => {
-    let content = <>
+    let content = <GameTooltip title={game.name} arrow  placement="top">
         {
             {
                 1: game.thumbnails[0] ? (
@@ -52,7 +52,7 @@ const GamePic = ({game, type}) => {
                   
             }[type]
         }
-    </>
+    </GameTooltip>
 
 
     return content

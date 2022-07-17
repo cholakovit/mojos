@@ -21,9 +21,36 @@ const GameLabels = ({ game, type }) => {
                   <GameLabel key={index}>
                     {
                       {
-                        0: import.meta.env.VITE_GAME_TAG_0_FREESPINS,
-                        1: import.meta.env.VITE_GAME_TAG_1_BONUSGAME,
-                        2: import.meta.env.VITE_GAME_TAG_2_SCATTERPAYS,
+                        0: (
+                          <>
+                            <Typography variant="h6">
+                              {import.meta.env.VITE_GAME_TAG_8_SPINS}
+                            </Typography>
+                            <Typography variant="h5">
+                              {import.meta.env.VITE_GAME_TAG_7_FREE}
+                            </Typography>
+                          </>
+                        ),
+                        1: (
+                          <>
+                            <Typography variant="h6">
+                              {import.meta.env.VITE_GAME_TAG_10_GAME}
+                            </Typography>
+                            <Typography variant="h5">
+                              {import.meta.env.VITE_GAME_TAG_9_BONUS}
+                            </Typography>
+                          </>
+                        ),
+                        2: (
+                          <>
+                            <Typography variant="h6">
+                              {import.meta.env.VITE_GAME_TAG_12_PAYS}
+                            </Typography>{" "}
+                            <Typography variant="h5">
+                              {import.meta.env.VITE_GAME_TAG_11_SCATTER}
+                            </Typography>
+                          </>
+                        ),
                         3: import.meta.env.VITE_GAME_TAG_3_GAMBLE,
                         4: import.meta.env.VITE_GAME_TAG_4_MYSTERIES,
                         5: import.meta.env.VITE_GAME_TAG_5_WILD,

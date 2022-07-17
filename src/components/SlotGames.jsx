@@ -94,8 +94,6 @@ const SlotGames = () => {
     }
   }, [filteredGames, filteredGamesMsg]);
 
-  console.log("games", games[0].slotData);
-
   return (
     <Box>
       <FeaturedGames />

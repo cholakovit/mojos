@@ -17,8 +17,6 @@ const FeaturedGames = () => {
 
   const featuredGames = fGames?.filter((game) => game.isFeatured === true);
 
-  console.log('featuredGames', featuredGames)
-
   return (
     <>
       <BoxLine>

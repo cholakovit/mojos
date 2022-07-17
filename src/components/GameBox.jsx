@@ -12,7 +12,9 @@ import GamePic from './GamePic'
 
 const GameBox = ({ game }) => {
   const [showThumb, setShowThumb] = useState(true);
-    console.log('game', game.thumbnails[0].videoUrl)
+
+  //console.log('game', game)
+
   let content = "";
   showThumb
     ? (content = <GamePic game={game} type={1} />)

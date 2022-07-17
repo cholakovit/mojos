@@ -16,7 +16,7 @@ const ShowGridGames = ({ games, gameType }) => {
         <Grid container spacing={2}>
           {games.map((game, index) => (
             <Grid item xs={3} key={index}>
-              <GameBox game={game} />
+                <GameBox game={game} />
             </Grid>
           ))}
         </Grid>
